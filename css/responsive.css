@@ -1,0 +1,17 @@
+@media(max-width: 868px) {
+    .form-wrapper{
+        grid-template-columns: 1fr!important;
+    }
+
+    .container{
+        max-width: 90%!important;
+    }
+
+    .img-section{
+        display: none!important;
+    }
+
+    .signup-form{
+        display: none!important;
+    }
+}

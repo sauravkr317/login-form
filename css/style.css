@@ -1,0 +1,246 @@
+@import url('./responsive.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "system-ui";
+  font-size: 18px;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: #8d0cb4f1;
+  transition: all .5s ease-in-out;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 100%;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: rgba(77, 50, 50, 0.6) 0px 0px 30px 5px;
+  position: relative;
+}
+
+.form {
+  padding: 3rem 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #444;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: #a7a7a7d7;
+  bottom: 0;
+  left: 0;
+}
+
+.input-field {
+  margin: 1rem 0rem;
+}
+
+.input-field > div {
+  width: 100%;
+  margin: 1rem 0rem;
+  border-bottom: 2px solid rgb(201, 201, 201);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-field > div:hover {
+  border-bottom: 2px solid #5a0dbed7;
+}
+
+.input-field > div i {
+  color: #5a0dbed7;
+  font-size: 1.2rem;
+}
+
+.input-field > div input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 0rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5a0dbed7;
+  font-weight: 600;
+}
+
+.input-field > div input::placeholder {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: rgb(112, 112, 112);
+  font-weight: 500;
+}
+
+h6 a {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #5a0dbed7;
+  text-align: center;
+  margin: 2rem 0rem 1rem 0rem;
+  padding: 0.5rem 0rem;
+  border-radius: 4px;
+  color: whitesmoke;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #444;
+  word-spacing: 0.5px;
+}
+
+h5 a {
+  text-decoration: none;
+}
+
+.img-section {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/pexels-lukas-1419922.jpg");
+  background-size: cover;
+  background-position: left;
+  z-index: 98;
+}
+
+.img-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #8d0cb4f1;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  font-size: 1.2rem;
+  padding: 0rem 2rem;
+  text-align: center;
+  z-index: 9999;
+}
+
+.content h3 {
+  letter-spacing: 0.5px;
+  color: whitesmoke;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.content h5 {
+  color: whitesmoke;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.form1 {
+  animation: animate 0.2s normal forwards ease-in-out;
+}
+
+@keyframes animate {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.form2 {
+  animation: removeanimate 0.2s normal forwards ease-in-out;
+}
+
+@keyframes removeanimate {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.float {
+  animation: float 0.3s normal forwards ease-in-out;
+}
+
+@keyframes float {
+  from {
+    left: 50%;
+    background-image: url("../img/pexels-lukas-1419922.jpg");
+  }
+  to {
+    left: 0%;
+    background-image: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  }
+}
+
+
+.floatremove {
+  animation: floatremove 0.3s normal forwards ease-in-out;
+}
+
+@keyframes floatremove {
+  from {
+    left: 0%;
+    background-image: url("https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  }
+  to {
+    left: 50%;
+    background-image: url("../img/pexels-lukas-1419922.jpg");
+  }
+}
